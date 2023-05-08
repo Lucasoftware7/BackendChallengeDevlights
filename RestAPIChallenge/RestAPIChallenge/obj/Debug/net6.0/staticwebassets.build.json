@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "eZUHpkjue1uLPh9C7x2gfx1z9OSsJIl4tn2BuRVA+Jg=",
+  "Source": "RestAPIChallenge",
+  "BasePath": "_content/RestAPIChallenge",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
