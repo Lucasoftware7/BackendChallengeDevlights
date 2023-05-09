@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wA8T2WWSc7lnneBGzs8oxgsSMqVCqxxga55XUxS9Sc6dUM5mnSrwZEbw1HES4FKoAFM3jGEgSuUSrPkVWUnLSA==",
+  "dgSpecHash": "go9NmQWjbOkNaAlJ55yB7glS/p6BI1dc2slmZ9TdSV3PjePpYq7l81l35MGS1uuHoUBcYFFDLZbqUfmH3h1yNw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ldz-z\\ONEDRIVE\\escritorio\\devlights-backend\\backendchallengedevlights\\Restapichallenge\\restapichallenge\\RestAPIChallenge.csproj",
+  "projectFilePath": "C:\\Users\\ldz-z\\OneDrive\\Escritorio\\devlights-backend\\BackendChallengeDevlights\\RestAPIChallenge\\RestAPIChallenge\\RestAPIChallenge.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ldz-z\\.nuget\\packages\\microsoft.aspnet.webapi.client\\4.0.20710\\microsoft.aspnet.webapi.client.4.0.20710.nupkg.sha512",
     "C:\\Users\\ldz-z\\.nuget\\packages\\microsoft.aspnet.webapi.core\\4.0.20710\\microsoft.aspnet.webapi.core.4.0.20710.nupkg.sha512",

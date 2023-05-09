@@ -98,3 +98,4 @@ C:\Users\ldz-z\OneDrive\Escritorio\devlights-backend\BackendChallengeDevlights\R
 C:\Users\ldz-z\OneDrive\Escritorio\devlights-backend\BackendChallengeDevlights\RestAPIChallenge\RestAPIChallenge\obj\Debug\net6.0\RestAPIChallenge.pdb
 C:\Users\ldz-z\OneDrive\Escritorio\devlights-backend\BackendChallengeDevlights\RestAPIChallenge\RestAPIChallenge\obj\Debug\net6.0\RestAPIChallenge.genruntimeconfig.cache
 C:\Users\ldz-z\OneDrive\Escritorio\devlights-backend\BackendChallengeDevlights\RestAPIChallenge\RestAPIChallenge\obj\Debug\net6.0\ref\RestAPIChallenge.dll
+C:\Users\ldz-z\OneDrive\Escritorio\devlights-backend\BackendChallengeDevlights\RestAPIChallenge\RestAPIChallenge\bin\Debug\net6.0\DAL\json\dataset.json

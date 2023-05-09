@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ldz-z\\ONEDRIVE\\escritorio\\devlights-backend\\backendchallengedevlights\\Restapichallenge\\restapichallenge\\RestAPIChallenge.csproj": {}
+    "C:\\Users\\ldz-z\\OneDrive\\Escritorio\\devlights-backend\\BackendChallengeDevlights\\RestAPIChallenge\\RestAPIChallenge\\RestAPIChallenge.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ldz-z\\ONEDRIVE\\escritorio\\devlights-backend\\backendchallengedevlights\\Restapichallenge\\restapichallenge\\RestAPIChallenge.csproj": {
+    "C:\\Users\\ldz-z\\OneDrive\\Escritorio\\devlights-backend\\BackendChallengeDevlights\\RestAPIChallenge\\RestAPIChallenge\\RestAPIChallenge.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ldz-z\\ONEDRIVE\\escritorio\\devlights-backend\\backendchallengedevlights\\Restapichallenge\\restapichallenge\\RestAPIChallenge.csproj",
+        "projectUniqueName": "C:\\Users\\ldz-z\\OneDrive\\Escritorio\\devlights-backend\\BackendChallengeDevlights\\RestAPIChallenge\\RestAPIChallenge\\RestAPIChallenge.csproj",
         "projectName": "RestAPIChallenge",
-        "projectPath": "C:\\Users\\ldz-z\\ONEDRIVE\\escritorio\\devlights-backend\\backendchallengedevlights\\Restapichallenge\\restapichallenge\\RestAPIChallenge.csproj",
+        "projectPath": "C:\\Users\\ldz-z\\OneDrive\\Escritorio\\devlights-backend\\BackendChallengeDevlights\\RestAPIChallenge\\RestAPIChallenge\\RestAPIChallenge.csproj",
         "packagesPath": "C:\\Users\\ldz-z\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ldz-z\\ONEDRIVE\\escritorio\\devlights-backend\\backendchallengedevlights\\Restapichallenge\\restapichallenge\\obj\\",
+        "outputPath": "C:\\Users\\ldz-z\\OneDrive\\Escritorio\\devlights-backend\\BackendChallengeDevlights\\RestAPIChallenge\\RestAPIChallenge\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ldz-z\\AppData\\Roaming\\NuGet\\NuGet.Config",

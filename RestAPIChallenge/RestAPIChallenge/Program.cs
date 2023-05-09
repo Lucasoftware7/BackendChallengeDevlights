@@ -1,6 +1,8 @@
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+//Create the Cors variable 
 var CorsConfiguration = "_CorsConfiguration";
 
 builder.Services.AddControllers();
@@ -8,6 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//Creating a CORS policy that allows the usage of the API from any origin 
 builder.Services.AddCors(options=>
 
 {
@@ -20,17 +23,10 @@ builder.Services.AddCors(options=>
 
 
 );
-/*builder.Services.AddCors(options =>
-{
-    options.AddPolicy(policy =>
-                          {
-                              policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
 
-                          });
-});*/
 
 var app = builder.Build();
-//policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

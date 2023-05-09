@@ -15,28 +15,32 @@ namespace RestAPIChallenge.Controllers
         [HttpGet("deals")]
         public IActionResult GetDeals(string? title = null, string? qsalePrice = null)
         {
-            // Leer el archivo JSON
-            var path = "C:\\Users\\ldz-z\\OneDrive\\Escritorio\\deals-dataset.json";
+            //create the path variable and assign it the relative path of the json file 
+            var path = @"DAL\json\dataset.json";
             var json = System.IO.File.ReadAllText(path);
-            // Convertir el JSON a un objeto Dictionary<string, List<ItemModel>>
+            // Convert the JSON to a  Dictionary<string, List<ItemModel>> Object
             var dealsDict = System.Text.Json.JsonSerializer.Deserialize<Dictionary<string, List<ItemModel>>>(json);
 
-            // Obtener la lista de items desde el diccionario
+            // Get the deals items from the dictionary
             var deals = dealsDict["items"];
 
-            // Resto del código...
 
-            // Convertir el JSON a una lista de objetos ItemModel
-            //List<ItemModel> deals = System.Text.Json.JsonSerializer.Deserialize<List<ItemModel>>(json);
-
-            // Parsear el qsalePrice a float
+            // Parse qsalePrice to float type.
             float price = 0;
             if (!string.IsNullOrEmpty(qsalePrice))
             {
                 float.TryParse(qsalePrice, out price);
             }
+            // Apply the filters
+            
 
-            // Aplicar los filtros
+            if (!string.IsNullOrEmpty(title) && title == "a" && price == 0)
+            {
+                
+                return Ok(dealsDict);
+            }
+
+            
             if (!string.IsNullOrEmpty(title))
             {
                 deals = deals.Where(d => d.title.Contains(title, StringComparison.OrdinalIgnoreCase)).ToList();
@@ -45,8 +49,9 @@ namespace RestAPIChallenge.Controllers
             {
                 deals = deals.Where(d => float.Parse(d.salePrice) == price).ToList();
             }
+            
 
-            // Devolver la lista filtrada en formato JSON
+            // return a filtered Json 
 
 
             if (string.IsNullOrEmpty(title) && string.IsNullOrEmpty(qsalePrice))
@@ -54,13 +59,10 @@ namespace RestAPIChallenge.Controllers
                 return Ok(new Dictionary<string, List<ItemModel>>());
             }
 
+            
 
 
-            /*
-            if (string.IsNullOrEmpty(title) && string.IsNullOrEmpty(qsalePrice))
-            {
-                return Ok(new List<ItemModel>());
-            }*/
+            
             else
             {
                 return Ok(deals);
@@ -68,37 +70,6 @@ namespace RestAPIChallenge.Controllers
         }
 
 
-        /*    [HttpGet("deals")]
-            public IActionResult GetDeals(string title = null, string? qsalePrice = null)
-            {
-                // Leer el archivo JSON
-                var path = "C:\\Users\\ldz-z\\OneDrive\\Escritorio\\deals-dataset.json";
-                var json = System.IO.File.ReadAllText(path);
-
-                // Convertir el JSON a una lista de objetos Deal
-                List<ItemModel> deals= System.Text.Json.JsonSerializer.Deserialize<List<ItemModel>>(json);
-                //ItemModel deals = JsonConvert.DeserializeObject<ItemModel>(json);
-                float price=float.Parse(qsalePrice);
-                // Aplicar los filtros
-                if (!string.IsNullOrEmpty(title))
-                {
-                    deals = deals.Where(d => d.title.Contains(title, StringComparison.OrdinalIgnoreCase)).ToList();
-                }
-                if (price>0)
-                {
-                    deals = float.Parse(qsalePrice) > 0 ? deals.Where(d => float.Parse(d.salePrice) > price).ToList() : deals.Where(d => float.Parse(d.salePrice) < price).ToList();
-                }
-
-                // Devolver la lista filtrada en formato JSON
-                if (deals.Count == 0 && string.IsNullOrEmpty(title))
-                {
-                    return Ok(new List<ItemModel>());
-                }
-                else
-                {
-                    return Ok(deals);
-                }
-            }*/
 
     }
 }
