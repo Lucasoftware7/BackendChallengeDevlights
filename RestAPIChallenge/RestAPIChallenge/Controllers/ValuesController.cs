@@ -13,7 +13,7 @@ namespace RestAPIChallenge.Controllers
     {
 
         [HttpGet("deals")]
-        public IActionResult GetDeals(string title = null, string qsalePrice = null)
+        public IActionResult GetDeals(string? title = null, string? qsalePrice = null)
         {
             // Leer el archivo JSON
             var path = "C:\\Users\\ldz-z\\OneDrive\\Escritorio\\deals-dataset.json";
@@ -43,7 +43,7 @@ namespace RestAPIChallenge.Controllers
             }
             if (price > 0)
             {
-                deals = deals.Where(d => float.Parse(d.salePrice) > price).ToList();
+                deals = deals.Where(d => float.Parse(d.salePrice) == price).ToList();
             }
 
             // Devolver la lista filtrada en formato JSON
