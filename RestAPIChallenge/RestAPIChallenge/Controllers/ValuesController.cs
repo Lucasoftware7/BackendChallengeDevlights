@@ -15,15 +15,14 @@ namespace RestAPIChallenge.Controllers
         [HttpGet("deals")]
         public IActionResult GetDeals(string? title = null, string? qsalePrice = null)
         {
-            //create the path variable and assign it the relative path of the json file 
-            var path = @"DAL\json\dataset.json";
+            // Read the JSON file
+            var path = @"DAL\\json\\dataset.json";
             var json = System.IO.File.ReadAllText(path);
-            // Convert the JSON to a  Dictionary<string, List<ItemModel>> Object
+            // Convert the JSON to a  Dictionary<string, List<ItemModel>> object
             var dealsDict = System.Text.Json.JsonSerializer.Deserialize<Dictionary<string, List<ItemModel>>>(json);
 
-            // Get the deals items from the dictionary
+            // Get all games in the the dictionary 
             var deals = dealsDict["items"];
-
 
             // Parse qsalePrice to float type.
             float price = 0;
@@ -31,16 +30,8 @@ namespace RestAPIChallenge.Controllers
             {
                 float.TryParse(qsalePrice, out price);
             }
-            // Apply the filters
-            
 
-            if (!string.IsNullOrEmpty(title) && title == "a" && price == 0)
-            {
-                
-                return Ok(dealsDict);
-            }
-
-            
+            //Apply filters
             if (!string.IsNullOrEmpty(title))
             {
                 deals = deals.Where(d => d.title.Contains(title, StringComparison.OrdinalIgnoreCase)).ToList();
@@ -49,9 +40,8 @@ namespace RestAPIChallenge.Controllers
             {
                 deals = deals.Where(d => float.Parse(d.salePrice) == price).ToList();
             }
-            
 
-            // return a filtered Json 
+            // Return the filtered list with JSON format
 
 
             if (string.IsNullOrEmpty(title) && string.IsNullOrEmpty(qsalePrice))
@@ -59,17 +49,15 @@ namespace RestAPIChallenge.Controllers
                 return Ok(new Dictionary<string, List<ItemModel>>());
             }
 
-            
 
 
-            
+
             else
             {
                 return Ok(deals);
             }
         }
-
-
-
     }
 }
+
+
